@@ -1,3 +1,11 @@
+Esse projeto tem como base um programa de xadrez construído em C#. Embora não esteja no mesmo nível de programas comerciais de xadrez, SrcChess está me vencendo sem problemas e, portanto, pode ser um oponente sério para jogadores casuais. O programa suporta um número razoável de funções. Suas maiores fraquezas são provavelmente a falta de uma boa função de avaliação de tabuleiro e de um banco de dados de final de jogo. Um de seus pontos fortes é que ele aproveita múltiplos processadores quando disponíveis. O programa também inclui um filtro PGN que permite importar jogos no formato PGN e construir seu próprio livro de aberturas.
+
+Um programa de xadrez não é muito complexo em si. Mas, como muitos softwares, o diabo está nos detalhes. Este programa de xadrez contém cerca de 10.000 linhas de códigos (incluindo observações). A interface do usuário é separada das outras classes para que possa ser facilmente alterada.
+
+A classe ChessBoard é a mais importante, pois contém a abstração do tabuleiro. Ela também contém a lógica para construir a lista de movimentos legais e para procurar o melhor movimento. Um pouco de complexidade extra foi adicionada para suportar multithreading. No entanto, a classe é relativamente pequena (menos de 2.000 linhas). Para melhorar a velocidade da pesquisa, uma lista de movimentos legais para cada {peça, posição da peça} é criada uma vez no construtor estático da classe.
+
+
+
 
 SrcChess2:
     Core:                               Contains the Chess board engine
